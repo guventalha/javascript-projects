@@ -106,11 +106,11 @@ form button:hover {
   text-decoration: line-through;
   opacity: 0.5;
 }
-
+/* 
 .fall {
   transform: translateY(8rem) rotateZ(30deg);
   opacity: 0;
-}
+} */
 select {
   -webkit-appearance: none;
   border: none;

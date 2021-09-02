@@ -8,6 +8,7 @@ const filterOption = document.querySelector('.todo-filter');
 
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
+filterOption.addEventListener('click', filterTodo);
 
 function addTodo(event) {
   event.preventDefault();
@@ -20,6 +21,7 @@ function addTodo(event) {
     newTodo.innerText = todoInput.value;
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
+
     const checkedBtn = document.createElement('button');
     checkedBtn.classList.add('check-btn');
     checkedBtn.innerHTML = '<i class= "fas fa-check"> </i>';
@@ -46,11 +48,30 @@ function deleteCheck(e) {
   if (item.classList[0] === 'check-btn') {
     const todo = item.parentElement;
     todo.classList.toggle('checked');
-    todo.classList.add('fall');
-    todo.addEventListener('transitionend', () => {
-      todo.remove();
-    });
   }
 }
 
-function filterTodo(e) {}
+function filterTodo(e) {
+  const todos = todoList.childNodes;
+  todos.forEach(function (todo) {
+    switch (e.target.value) {
+      case 'all':
+        todo.style.display = 'flex';
+        break;
+      case 'checked':
+        if (todo.classList.contains('checked')) {
+          todo.style.display = 'flex';
+        } else {
+          todo.style.display = 'none';
+        }
+        break;
+      case 'unchecked':
+        if (!todo.classList.contains('checked')) {
+          todo.style.display = 'flex';
+        } else {
+          todo.style.display = 'none';
+        }
+        break;
+    }
+  });
+}
