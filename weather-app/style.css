@@ -38,3 +38,15 @@ body {
 .degree-section h2 {
   font-size: 1.8rem;
 }
+
+.icon {
+  margin-left: 10px;
+  height: 80px;
+  width: 100px;
+
+  background-size: cover;
+  background-position: center center;
+}
+.temperature-description {
+  font-size: 1.5rem;
+}

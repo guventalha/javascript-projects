@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
   let temperatur = document.querySelector('.degree');
   let timezone = document.querySelector('.location-timezone');
   let descripton = document.querySelector('.temperature-description');
+  let iconEl = document.querySelector('.icon');
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((pos) => {
@@ -18,11 +19,14 @@ window.addEventListener('load', () => {
           console.log(data);
           const { temp_c } = data.current;
           const { name, region } = data.location;
+          const { icon, text } = data.current.condition;
           //set dom element to api
           temperatur.textContent = temp_c;
           timezone.textContent = name + ' ' + region;
-          //buraya summary yaz conditiondan cloud durumunu yaz
-          //icon belirle
+          //set icon
+          iconEl.style.backgroundImage = `url(${icon})`;
+          //set description
+          descripton.textContent = text;
         });
     });
   }
