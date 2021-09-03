@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: #103783;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('/alberto-restifo-cFplR9ZGnAk-unsplash.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+.big-text {
+  font-size: 6rem;
+  line-height: 1;
+  padding: 0 2rem;
+}
+.countdown-el {
+  text-align: center;
+}
+.countdown-el span {
+  font-size: 1.5rem;
+}
+
+.glass {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.30575980392156865) 0%,
+    rgba(238, 238, 238, 0.7539390756302521) 100%
+  );
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  padding: 30px;
+  width: 800px;
+}
