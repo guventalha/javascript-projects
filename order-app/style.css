@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  background-color: #fffeb3;
+}
+
+.header {
+  background-color: #fb2e01;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  color: white;
+  font-size: 3rem;
+}
+
+.container {
+  margin: 50px 100px;
+}
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  box-shadow: 4px 4px 3px gray;
+  width: 24%;
+  height: 40vh;
+  border-radius: 20px;
+  padding: 5px;
+}
+.title {
+  margin-top: 10px;
+}
+.info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.product-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+.add-btn {
+  margin-top: 20px;
+  border-radius: 20px;
+  color: aliceblue;
+  width: 200px;
+  height: 40px;
+  border: none;
+  background-color: #fb2e01;
+  margin-left: 26px;
+}
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
